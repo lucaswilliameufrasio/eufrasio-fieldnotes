@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@source "./src/**/*.rs";
+
+:root {
+  --background: #f4f1e9;
+  --foreground: #292820;
+  --primary: #9a442d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+}
+
+@layer base {
+  body { @apply bg-background text-foreground; }
+}
+
+.ProseMirror { min-height: 14rem; outline: none; }
+.ProseMirror > * + * { margin-top: .8rem; }
+.ProseMirror h1 { font-size: 1.8rem; font-weight: 600; }
+.ProseMirror h2 { font-size: 1.4rem; font-weight: 600; }
+.ProseMirror ul { list-style: disc; padding-left: 1.5rem; }
+.ProseMirror ol { list-style: decimal; padding-left: 1.5rem; }
+.ProseMirror blockquote { border-left: 3px solid #9a442d; padding-left: 1rem; opacity: .75; }
+.ProseMirror pre { overflow-x: auto; background: #282820; color: #f4f1e9; padding: .8rem; }
+.editor-tool { border: 1px solid transparent; padding: .35rem .55rem; font: 12px ui-monospace, monospace; }
+.editor-tool:hover, .editor-tool.is-active { border-color: #9a442d; color: #9a442d; }
+.fieldnote-content > * + * { margin-top: 1.25rem; }
+.fieldnote-content h1 { font-size: 2rem; font-weight: 600; line-height: 1.15; }
+.fieldnote-content h2 { font-size: 1.55rem; font-weight: 600; line-height: 1.2; }
+.fieldnote-content ul { list-style: disc; padding-left: 1.5rem; }
+.fieldnote-content ol { list-style: decimal; padding-left: 1.5rem; }
+.fieldnote-content blockquote { border-left: 3px solid #9a442d; padding-left: 1rem; opacity: .75; }
+.fieldnote-content pre { overflow-x: auto; background: #282820; color: #f4f1e9; padding: 1rem; }
